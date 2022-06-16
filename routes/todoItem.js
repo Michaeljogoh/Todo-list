@@ -4,7 +4,9 @@ const router = express.Router();
 // Import Controller
 const {addItem , getItems, updateItem, deleteItem} = require('../controller/todoItemController');
 
-
+router.get('/', (req, res)=>{
+    res.send('Home')
+});
 //Posting item
 router.post('/api/item', addItem );
 
